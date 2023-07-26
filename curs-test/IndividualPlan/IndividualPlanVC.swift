@@ -7,10 +7,14 @@
 
 import UIKit
 
-class IndividualPlanVC: GenericVC<IndividualPlanView> {
+final class IndividualPlanVC: GenericVC<IndividualPlanView> {
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.title = "Индивидуальный учебный план"
+        
         setupBarButtons()
+        parseData()
     }
     
     func setupBarButtons() {
@@ -24,13 +28,27 @@ class IndividualPlanVC: GenericVC<IndividualPlanView> {
         rootView.downloadBarButton.action = #selector(saveFileTapped)
     }
     
+    private func parseData() {
+        let jsonData = Data(PlanData.data.utf8)
+
+        do {
+            let plan = try JSONDecoder().decode(IndividualPlanModel.self, from: jsonData)
+            print(plan.Semesters[0].Number)
+        } catch {
+            print(error)
+        }
+    }
+    
     @objc private func backButtonTapped() {
-        
+
     }
     
     @objc private func saveFileTapped() {
         
     }
+
+
+
 
 
 }

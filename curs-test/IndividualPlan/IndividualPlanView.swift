@@ -7,19 +7,21 @@
 
 import UIKit
 
-class IndividualPlanView: UIView {
+final class IndividualPlanView: UIView {
     
     let backBarButton: UIBarButtonItem = {
         let button = UIBarButtonItem(image: UIImage(systemName: SFConstants.backButton), style: .plain, target: nil, action: nil)
-        button.tintColor = .white
+        button.tintColor = .label
         return button
     }()
     
     let downloadBarButton: UIBarButtonItem = {
         let button = UIBarButtonItem(image: UIImage(systemName: SFConstants.downloadButton), style: .plain, target: nil, action: nil)
-        button.tintColor = .white
+        button.tintColor = .label
         return button
     }()
+    
+
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
