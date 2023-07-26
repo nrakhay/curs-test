@@ -15,12 +15,14 @@ class SegmentedControlView: UIView {
         return control
     }()
     
-    let tableHeaderView = TableTopHeaderView()
+    let topTableHeaderView = TopTableHeaderView()
+    let bottomTableHeaderView = BottomTableHeaderView()
+    let tableView = UITableView()
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
         self.backgroundColor = .secondarySystemBackground
-        addSubviews(selector, tableHeaderView)
+        addSubviews(selector, topTableHeaderView, bottomTableHeaderView)
     }
     
     required init?(coder: NSCoder) {
@@ -31,8 +33,11 @@ class SegmentedControlView: UIView {
         selector.anchor(top: self.topAnchor, width: self.width, height: 50)
         selector.centerX(in: self)
         
-        tableHeaderView.anchor(top: selector.bottomAnchor, width: self.width, height: 40)
-        tableHeaderView.centerX(in: self)
+        topTableHeaderView.anchor(top: selector.bottomAnchor, width: self.width, height: 40)
+        topTableHeaderView.centerX(in: self)
+        
+        bottomTableHeaderView.anchor(top: topTableHeaderView.bottomAnchor, width: self.width, height: 60)
+        bottomTableHeaderView.centerX(in: self)
     }
     
     func configureView(with data: IndividualPlanModel) {

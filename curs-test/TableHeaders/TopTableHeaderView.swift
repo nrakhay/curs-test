@@ -7,18 +7,14 @@
 
 import UIKit
 
-class TableTopHeaderView: UIView {
+class TopTableHeaderView: UIView {
     let leftView = UIView()
     
     let rightView = UIView()
-    
-    let rightViewLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Аудиторные занятия в часах"
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = .systemGray
-        return label
-    }()
+
+    let rightViewLabel = TableLabel(text: "Аудиторные занятия в часах",
+                                    font: UIFont.systemFont(ofSize: 14),
+                                    color: .systemGray)
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
