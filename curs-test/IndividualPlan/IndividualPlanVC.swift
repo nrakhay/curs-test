@@ -38,6 +38,7 @@ final class IndividualPlanVC: GenericVC<IndividualPlanView> {
         do {
             let parsedData = try JSONDecoder().decode(IndividualPlanModel.self, from: jsonData)
             setupViews(with: parsedData)
+            rootView.segmentedControlView.configureView(with: parsedData)
         } catch {
             print(error)
         }

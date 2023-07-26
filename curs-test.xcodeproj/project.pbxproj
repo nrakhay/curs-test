@@ -19,6 +19,9 @@
 		5C28354A2A7104D400F74EC2 /* SFConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2835492A7104D400F74EC2 /* SFConstants.swift */; };
 		5C28354C2A71079700F74EC2 /* IndividualPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C28354B2A71079700F74EC2 /* IndividualPlanModel.swift */; };
 		5C28354E2A7117E100F74EC2 /* PlanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C28354D2A7117E100F74EC2 /* PlanData.swift */; };
+		5C2835532A7123D000F74EC2 /* SegmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2835522A7123D000F74EC2 /* SegmentedControlView.swift */; };
+		5C2835552A71241C00F74EC2 /* SegmentedControlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2835542A71241C00F74EC2 /* SegmentedControlVC.swift */; };
+		5C2835582A712E9000F74EC2 /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2835572A712E9000F74EC2 /* TableHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		5C2835492A7104D400F74EC2 /* SFConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFConstants.swift; sourceTree = "<group>"; };
 		5C28354B2A71079700F74EC2 /* IndividualPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualPlanModel.swift; sourceTree = "<group>"; };
 		5C28354D2A7117E100F74EC2 /* PlanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanData.swift; sourceTree = "<group>"; };
+		5C2835522A7123D000F74EC2 /* SegmentedControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlView.swift; sourceTree = "<group>"; };
+		5C2835542A71241C00F74EC2 /* SegmentedControlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlVC.swift; sourceTree = "<group>"; };
+		5C2835572A712E9000F74EC2 /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 			children = (
 				5C2835482A7104C300F74EC2 /* Constants */,
 				5C2835402A71007100F74EC2 /* Application */,
+				5C2835562A712E6E00F74EC2 /* TableHeaders */,
 				5C28353F2A71005700F74EC2 /* IndividualPlan */,
 				5C2835422A71008B00F74EC2 /* Helpers */,
 				5C2835412A71008200F74EC2 /* Assets */,
@@ -85,6 +92,7 @@
 				5C28353C2A71002100F74EC2 /* IndividualPlanView.swift */,
 				5C28354B2A71079700F74EC2 /* IndividualPlanModel.swift */,
 				5C28354D2A7117E100F74EC2 /* PlanData.swift */,
+				5C28354F2A71233B00F74EC2 /* IndividualPlanTable */,
 			);
 			path = IndividualPlan;
 			sourceTree = "<group>";
@@ -123,6 +131,23 @@
 				5C2835492A7104D400F74EC2 /* SFConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		5C28354F2A71233B00F74EC2 /* IndividualPlanTable */ = {
+			isa = PBXGroup;
+			children = (
+				5C2835522A7123D000F74EC2 /* SegmentedControlView.swift */,
+				5C2835542A71241C00F74EC2 /* SegmentedControlVC.swift */,
+			);
+			path = IndividualPlanTable;
+			sourceTree = "<group>";
+		};
+		5C2835562A712E6E00F74EC2 /* TableHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				5C2835572A712E9000F74EC2 /* TableHeaderView.swift */,
+			);
+			path = TableHeaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,10 +220,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2835582A712E9000F74EC2 /* TableHeaderView.swift in Sources */,
 				5C28353B2A70FFA800F74EC2 /* GenericVC.swift in Sources */,
+				5C2835552A71241C00F74EC2 /* SegmentedControlVC.swift in Sources */,
 				5C28354E2A7117E100F74EC2 /* PlanData.swift in Sources */,
 				5C2835462A71027100F74EC2 /* Constraints.swift in Sources */,
 				5C28354A2A7104D400F74EC2 /* SFConstants.swift in Sources */,
+				5C2835532A7123D000F74EC2 /* SegmentedControlView.swift in Sources */,
 				5C2835442A71024000F74EC2 /* Extensions.swift in Sources */,
 				5C28352B2A70FEF300F74EC2 /* IndividualPlanVC.swift in Sources */,
 				5C2835272A70FEF300F74EC2 /* AppDelegate.swift in Sources */,

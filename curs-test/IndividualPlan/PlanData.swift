@@ -91,7 +91,7 @@ struct PlanData {
                 ]
             },
             {
-                "Number": "7",
+                "Number": "6",
                 "Disciplines" : [
                     {
                         "DisciplineId" : "5d762432cbbc35013c1dff3f",
@@ -112,7 +112,7 @@ struct PlanData {
                                 "RealHours" : "1"
                             },
                             {
-                                "sLessonTypeId" : "3",
+                                "LessonTypeId" : "3",
                                 "Hours" : "30",
                                 "RealHours" : "10"
                             }
