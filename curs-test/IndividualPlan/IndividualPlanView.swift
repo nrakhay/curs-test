@@ -9,14 +9,14 @@ import UIKit
 
 class IndividualPlanView: UIView {
     
-    let leftBarButton: UIBarButtonItem = {
-        let button = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal.circle"), style: .plain, target: nil, action: nil)
+    let backBarButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(image: UIImage(systemName: SFConstants.backButton), style: .plain, target: nil, action: nil)
         button.tintColor = .white
         return button
     }()
     
-    let rightBarButton: UIBarButtonItem = {
-        let button = UIBarButtonItem(image: UIImage(systemName: "plus.circle"), style: .plain, target: nil, action: nil)
+    let downloadBarButton: UIBarButtonItem = {
+        let button = UIBarButtonItem(image: UIImage(systemName: SFConstants.downloadButton), style: .plain, target: nil, action: nil)
         button.tintColor = .white
         return button
     }()
@@ -24,7 +24,6 @@ class IndividualPlanView: UIView {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         self.backgroundColor = .systemBackground
-        
     }
     
     required init?(coder: NSCoder) {

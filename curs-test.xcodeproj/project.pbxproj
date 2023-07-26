@@ -16,6 +16,7 @@
 		5C28353D2A71002100F74EC2 /* IndividualPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C28353C2A71002100F74EC2 /* IndividualPlanView.swift */; };
 		5C2835442A71024000F74EC2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2835432A71024000F74EC2 /* Extensions.swift */; };
 		5C2835462A71027100F74EC2 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2835452A71027100F74EC2 /* Constraints.swift */; };
+		5C28354A2A7104D400F74EC2 /* SFConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2835492A7104D400F74EC2 /* SFConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5C28353C2A71002100F74EC2 /* IndividualPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualPlanView.swift; sourceTree = "<group>"; };
 		5C2835432A71024000F74EC2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		5C2835452A71027100F74EC2 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		5C2835492A7104D400F74EC2 /* SFConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +64,12 @@
 		5C2835252A70FEF300F74EC2 /* curs-test */ = {
 			isa = PBXGroup;
 			children = (
+				5C2835482A7104C300F74EC2 /* Constants */,
 				5C2835402A71007100F74EC2 /* Application */,
 				5C28353F2A71005700F74EC2 /* IndividualPlan */,
 				5C2835422A71008B00F74EC2 /* Helpers */,
 				5C2835412A71008200F74EC2 /* Assets */,
+				5C2835342A70FEF500F74EC2 /* Info.plist */,
 			);
 			path = "curs-test";
 			sourceTree = "<group>";
@@ -84,7 +88,6 @@
 			children = (
 				5C2835262A70FEF300F74EC2 /* AppDelegate.swift */,
 				5C2835282A70FEF300F74EC2 /* SceneDelegate.swift */,
-				5C2835342A70FEF500F74EC2 /* Info.plist */,
 				5C2835312A70FEF500F74EC2 /* LaunchScreen.storyboard */,
 			);
 			path = Application;
@@ -106,6 +109,14 @@
 				5C2835452A71027100F74EC2 /* Constraints.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5C2835482A7104C300F74EC2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				5C2835492A7104D400F74EC2 /* SFConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +191,7 @@
 			files = (
 				5C28353B2A70FFA800F74EC2 /* GenericVC.swift in Sources */,
 				5C2835462A71027100F74EC2 /* Constraints.swift in Sources */,
+				5C28354A2A7104D400F74EC2 /* SFConstants.swift in Sources */,
 				5C2835442A71024000F74EC2 /* Extensions.swift in Sources */,
 				5C28352B2A70FEF300F74EC2 /* IndividualPlanVC.swift in Sources */,
 				5C2835272A70FEF300F74EC2 /* AppDelegate.swift in Sources */,
