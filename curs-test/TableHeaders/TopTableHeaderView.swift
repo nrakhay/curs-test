@@ -28,6 +28,7 @@ class TopTableHeaderView: UIView {
     }
     
     override func layoutSubviews() {
+        super.layoutSubviews()
         leftView.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, width: WindowDimensions.width * 0.4)
         
         rightView.anchor(top: self.topAnchor, left: leftView.rightAnchor, bottom: self.bottomAnchor, width: WindowDimensions.width * 0.6)

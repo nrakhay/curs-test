@@ -36,8 +36,8 @@ final class IndividualPlanView: UIView {
         return label
     }()
     
-    let segmentedControlView: SegmentedControlView = {
-        let view = SegmentedControlView()
+    let bottomView: UIView = {
+        let view = UIView()
         return view
     }()
     
@@ -45,7 +45,7 @@ final class IndividualPlanView: UIView {
         super.init(frame: .zero)
         self.backgroundColor = .systemBackground
         
-        addSubviews(topHeaderLabel, bottomHeaderLabel, segmentedControlView)
+        addSubviews(topHeaderLabel, bottomHeaderLabel, bottomView)
     }
     
     required init?(coder: NSCoder) {
@@ -53,13 +53,15 @@ final class IndividualPlanView: UIView {
     }
     
     override func layoutSubviews() {
+        super.layoutSubviews()
+        
         topHeaderLabel.anchor(top: self.safeAreaLayoutGuide.topAnchor, paddingTop: 25)
         topHeaderLabel.centerX(in: self)
         
         bottomHeaderLabel.anchor(top: topHeaderLabel.bottomAnchor)
         bottomHeaderLabel.centerX(in: self)
         
-        segmentedControlView.anchor(top: bottomHeaderLabel.bottomAnchor, bottom: self.bottomAnchor, paddingTop: 25)
-        segmentedControlView.centerX(in: self, width: self.width)
+        bottomView.anchor(top: bottomHeaderLabel.bottomAnchor, bottom: self.bottomAnchor, paddingTop: 25)
+        bottomView.centerX(in: self, width: self.width)
     }
 }

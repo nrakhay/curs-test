@@ -36,6 +36,29 @@ extension UIViewController {
 }
 
 extension UIViewController {
+    /// Add a child UIViewController to a given UIView. If `view` is set to nil or not set, it will add the child the ViewController's view.
+    func add(_ child: UIViewController, view: UIView? = nil) {
+        let view: UIView = view ?? self.view
+        addChild(child)
+        child.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(child.view)
+        
+        child.view.anchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
+        child.didMove(toParent: self)
+    }
+
+    /// Remove a child viewController from it's container
+    func remove() {
+        guard parent != nil else {
+            return
+        }
+        willMove(toParent: nil)
+        view.removeFromSuperview()
+        removeFromParent()
+    }
+}
+
+extension UIViewController {
     var topbarHeight: CGFloat {
         return (view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0.0) +
             (self.navigationController?.navigationBar.frame.height ?? 0.0)

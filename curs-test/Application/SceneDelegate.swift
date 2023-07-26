@@ -17,7 +17,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         let vc = IndividualPlanVC()
+        let segmentedVC = SegmentedControlVC()
+        vc.addChild(segmentedVC)
+        vc.rootView.addSubview(segmentedVC.rootView)
+        segmentedVC.didMove(toParent: vc)
+        
         let navController = UINavigationController(rootViewController: vc)
+        
     
         window?.rootViewController = navController
         window?.makeKeyAndVisible()

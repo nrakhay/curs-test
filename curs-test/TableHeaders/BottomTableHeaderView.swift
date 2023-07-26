@@ -8,9 +8,17 @@
 import UIKit
 
 class BottomTableHeaderView: UIView {
-    let leftView = UIView()
+    let leftView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .secondarySystemBackground
+        return view
+    }()
     
-    let rightView = UIView()
+    let rightView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemBackground
+        return view
+    }()
     
 //    let lectureView: UIView = {
 //        let view = UIView()
@@ -69,8 +77,6 @@ class BottomTableHeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
-        self.backgroundColor = .secondarySystemBackground
-        
         addViews()
     }
     
@@ -79,6 +85,8 @@ class BottomTableHeaderView: UIView {
     }
     
     override func layoutSubviews() {
+        super.layoutSubviews()
+        
         leftView.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, width: WindowDimensions.width * 0.4)
         
         rightView.anchor(top: self.topAnchor, left: leftView.rightAnchor, bottom: self.bottomAnchor, width: WindowDimensions.width * 0.6)

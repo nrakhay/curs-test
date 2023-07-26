@@ -8,11 +8,14 @@
 import UIKit
 
 final class IndividualPlanVC: GenericVC<IndividualPlanView> {
+    private let segmentedVC = SegmentedControlVC()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = "Индивидуальный учебный план"
         
+        self.add(segmentedVC, view: rootView.bottomView)
         setupBarButtons()
         parseData()
     }
@@ -38,7 +41,7 @@ final class IndividualPlanVC: GenericVC<IndividualPlanView> {
         do {
             let parsedData = try JSONDecoder().decode(IndividualPlanModel.self, from: jsonData)
             setupViews(with: parsedData)
-            rootView.segmentedControlView.configureView(with: parsedData)
+            segmentedVC.configureView(with: parsedData)
         } catch {
             print(error)
         }

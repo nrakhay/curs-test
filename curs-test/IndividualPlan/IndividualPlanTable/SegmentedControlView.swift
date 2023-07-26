@@ -8,21 +8,26 @@
 import UIKit
 
 class SegmentedControlView: UIView {
-    private var viewData: IndividualPlanModel? = nil
-    
     let selector: UISegmentedControl = {
         let control = UISegmentedControl()
         return control
     }()
     
+    let tableView: UITableView = {
+        let table = UITableView()
+        table.register(DisciplineTVCell.self, forCellReuseIdentifier: DisciplineTVCell.identifier)
+        table.showsVerticalScrollIndicator = false
+        table.backgroundColor = .secondarySystemBackground
+        return table
+    }()
+    
     let topTableHeaderView = TopTableHeaderView()
     let bottomTableHeaderView = BottomTableHeaderView()
-    let tableView = UITableView()
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
         self.backgroundColor = .secondarySystemBackground
-        addSubviews(selector, topTableHeaderView, bottomTableHeaderView)
+        addSubviews(selector, topTableHeaderView, bottomTableHeaderView, tableView)
     }
     
     required init?(coder: NSCoder) {
@@ -30,6 +35,8 @@ class SegmentedControlView: UIView {
     }
     
     override func layoutSubviews() {
+        super.layoutSubviews()
+        
         selector.anchor(top: self.topAnchor, width: self.width, height: 50)
         selector.centerX(in: self)
         
@@ -38,17 +45,8 @@ class SegmentedControlView: UIView {
         
         bottomTableHeaderView.anchor(top: topTableHeaderView.bottomAnchor, width: self.width, height: 60)
         bottomTableHeaderView.centerX(in: self)
-    }
-    
-    func configureView(with data: IndividualPlanModel) {
-        viewData = data
         
-        for i in 0..<2 {
-            let element = data.Semesters
-            selector.insertSegment(withTitle: "Семестр \(element[i].Number)", at: i, animated: true)
-        }
-        
-        selector.selectedSegmentIndex = 0
+        tableView.anchor(top: bottomTableHeaderView.bottomAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, width: self.width)
     }
 
 }
