@@ -22,6 +22,7 @@
 		5C2835532A7123D000F74EC2 /* SegmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2835522A7123D000F74EC2 /* SegmentedControlView.swift */; };
 		5C2835552A71241C00F74EC2 /* SegmentedControlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2835542A71241C00F74EC2 /* SegmentedControlVC.swift */; };
 		5C2835582A712E9000F74EC2 /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2835572A712E9000F74EC2 /* TableHeaderView.swift */; };
+		5C28355A2A71377B00F74EC2 /* WindowDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2835592A71377B00F74EC2 /* WindowDimensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		5C2835522A7123D000F74EC2 /* SegmentedControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlView.swift; sourceTree = "<group>"; };
 		5C2835542A71241C00F74EC2 /* SegmentedControlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlVC.swift; sourceTree = "<group>"; };
 		5C2835572A712E9000F74EC2 /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
+		5C2835592A71377B00F74EC2 /* WindowDimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowDimensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				5C28353A2A70FFA800F74EC2 /* GenericVC.swift */,
 				5C2835432A71024000F74EC2 /* Extensions.swift */,
 				5C2835452A71027100F74EC2 /* Constraints.swift */,
+				5C2835592A71377B00F74EC2 /* WindowDimensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				5C2835442A71024000F74EC2 /* Extensions.swift in Sources */,
 				5C28352B2A70FEF300F74EC2 /* IndividualPlanVC.swift in Sources */,
 				5C2835272A70FEF300F74EC2 /* AppDelegate.swift in Sources */,
+				5C28355A2A71377B00F74EC2 /* WindowDimensions.swift in Sources */,
 				5C2835292A70FEF300F74EC2 /* SceneDelegate.swift in Sources */,
 				5C28354C2A71079700F74EC2 /* IndividualPlanModel.swift in Sources */,
 				5C28353D2A71002100F74EC2 /* IndividualPlanView.swift in Sources */,
