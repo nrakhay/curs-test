@@ -21,11 +21,26 @@ final class IndividualPlanView: UIView {
         return button
     }()
     
-
+    let topHeaderLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .label
+        label.text = "Индивидуальный учебный план"
+        label.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
+        return label
+    }()
+    
+    let bottomHeaderLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .label
+        label.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
+        return label
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
         self.backgroundColor = .systemBackground
+        
+        addSubviews(topHeaderLabel, bottomHeaderLabel)
     }
     
     required init?(coder: NSCoder) {
@@ -33,6 +48,10 @@ final class IndividualPlanView: UIView {
     }
     
     override func layoutSubviews() {
+        topHeaderLabel.anchor(top: self.safeAreaLayoutGuide.topAnchor, paddingTop: 15)
+        topHeaderLabel.centerX(in: self)
         
+        bottomHeaderLabel.anchor(top: topHeaderLabel.bottomAnchor)
+        bottomHeaderLabel.centerX(in: self)
     }
 }

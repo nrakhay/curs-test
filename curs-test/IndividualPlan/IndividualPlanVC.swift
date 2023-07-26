@@ -17,7 +17,7 @@ final class IndividualPlanVC: GenericVC<IndividualPlanView> {
         parseData()
     }
     
-    func setupBarButtons() {
+    private func setupBarButtons() {
         self.navigationItem.leftBarButtonItem = rootView.backBarButton
         self.navigationItem.rightBarButtonItem = rootView.downloadBarButton
         
@@ -28,12 +28,16 @@ final class IndividualPlanVC: GenericVC<IndividualPlanView> {
         rootView.downloadBarButton.action = #selector(saveFileTapped)
     }
     
+    private func setupViews(with data: IndividualPlanModel) {
+        rootView.bottomHeaderLabel.text = "на \(data.AcademicYear)"
+    }
+    
     private func parseData() {
         let jsonData = Data(PlanData.data.utf8)
 
         do {
-            let plan = try JSONDecoder().decode(IndividualPlanModel.self, from: jsonData)
-            print(plan.Semesters[0].Number)
+            let parsedData = try JSONDecoder().decode(IndividualPlanModel.self, from: jsonData)
+            setupViews(with: parsedData)
         } catch {
             print(error)
         }
