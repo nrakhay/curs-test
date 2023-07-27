@@ -58,13 +58,25 @@ extension SegmentedControlVC: UITableViewDelegate, UITableViewDataSource {
         
         guard let viewData = viewData else { return cell }
         
-        let currDiscipline = viewData.Semesters[rootView.selector.selectedSegmentIndex].Disciplines[indexPath.row
-        ]
-        
-        let disciplineName = currDiscipline.DisciplineName.nameRu
+        let currDiscipline = viewData.Semesters[rootView.selector.selectedSegmentIndex].Disciplines[indexPath.row]
+
+        var disciplineName = ""
         var lectureHours: DisciplineTVCell.Hours? = nil
         var seminarHours: DisciplineTVCell.Hours? = nil
         var labHours: DisciplineTVCell.Hours? = nil
+        
+        let userLang = Locale.current.language.languageCode?.identifier ?? "en"
+        
+        switch userLang {
+        case "en":
+            disciplineName = currDiscipline.DisciplineName.nameEn
+        case "kk":
+            disciplineName = currDiscipline.DisciplineName.nameKk
+        case "ru":
+            disciplineName = currDiscipline.DisciplineName.nameRu
+        default:
+            break
+        }
         
         for lesson in currDiscipline.Lesson {
             switch lesson.LessonTypeId {

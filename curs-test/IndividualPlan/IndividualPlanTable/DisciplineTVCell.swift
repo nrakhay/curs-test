@@ -43,13 +43,6 @@ class DisciplineTVCell: UITableViewCell {
         return view
     }()
     
-//    let stackView: UIStackView = {
-//        let sv = UIStackView()
-//        sv.axis = .horizontal
-//        sv.distribution = .fillProportionally
-//        return sv
-//    }()
-    
     let lectureView: UIView = {
         let view = UIView()
         return view
@@ -117,6 +110,17 @@ class DisciplineTVCell: UITableViewCell {
         return -1
     }
     
+    private func addViews() {
+        addSubviews(leftView, rightView)
+        leftView.addSubview(disciplineNameLabel)
+        rightView.addSubviews(lectureView, seminarView, labView)
+
+        
+        lectureView.addSubview(lectureLabel)
+        seminarView.addSubview(seminarLabel)
+        labView.addSubview(labLabel)
+    }
+    
     func configure(with viewModel: ViewModel) {
         disciplineNameLabel.text = viewModel.disciplineName
         
@@ -152,17 +156,6 @@ class DisciplineTVCell: UITableViewCell {
             }
         }
         
-    }
-    
-    private func addViews() {
-        addSubviews(leftView, rightView)
-        leftView.addSubview(disciplineNameLabel)
-        rightView.addSubviews(lectureView, seminarView, labView)
-
-        
-        lectureView.addSubview(lectureLabel)
-        seminarView.addSubview(seminarLabel)
-        labView.addSubview(labLabel)
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

@@ -88,10 +88,9 @@
 		5C2835252A70FEF300F74EC2 /* curs-test */ = {
 			isa = PBXGroup;
 			children = (
-				5C28355D2A71404900F74EC2 /* Components */,
+				5C28355D2A71404900F74EC2 /* ReusableComponents */,
 				5C2835482A7104C300F74EC2 /* Constants */,
 				5C2835402A71007100F74EC2 /* Application */,
-				5C2835562A712E6E00F74EC2 /* TableHeaders */,
 				5C28353F2A71005700F74EC2 /* IndividualPlan */,
 				5C2835422A71008B00F74EC2 /* Helpers */,
 				5C2835412A71008200F74EC2 /* Assets */,
@@ -156,6 +155,7 @@
 				5C2835522A7123D000F74EC2 /* SegmentedControlView.swift */,
 				5C2835542A71241C00F74EC2 /* SegmentedControlVC.swift */,
 				5C2835602A71736D00F74EC2 /* DisciplineTVCell.swift */,
+				5C2835562A712E6E00F74EC2 /* TableHeaders */,
 			);
 			path = IndividualPlanTable;
 			sourceTree = "<group>";
@@ -169,12 +169,12 @@
 			path = TableHeaders;
 			sourceTree = "<group>";
 		};
-		5C28355D2A71404900F74EC2 /* Components */ = {
+		5C28355D2A71404900F74EC2 /* ReusableComponents */ = {
 			isa = PBXGroup;
 			children = (
 				5C28355E2A71406400F74EC2 /* TableLabel.swift */,
 			);
-			path = Components;
+			path = ReusableComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
