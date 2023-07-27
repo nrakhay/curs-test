@@ -22,7 +22,7 @@ struct PlanData {
                         "DisciplineId" : "5d762432cbbc35013c1dff3f",
                         "DisciplineName" : {
                             "nameKk" : "Электрохимия (ағылшын)",
-                            "nameRu" : "Электрохимия (на англ. яз) ",
+                            "nameRu" : "Электрохимия (на англ. яз.) ",
                             "nameEn" : "Electrochemistry"
                         },
                         "Lesson" : [
@@ -82,8 +82,8 @@ struct PlanData {
                                 "RealHours" : "10"
                             },
                             {
-                                "LessonTypeId" : "2",
-                                "Hours" : "30",
+                                "LessonTypeId" : "3",
+                                "Hours" : "40",
                                 "RealHours" : "10"
                             }
                         ]
@@ -97,7 +97,7 @@ struct PlanData {
                         "DisciplineId" : "5d762432cbbc35013c1dff3f",
                         "DisciplineName" : {
                             "nameKk" : "Электрохимия (ағылшын)",
-                            "nameRu" : "Электрохимия на англ. Яз ",
+                            "nameRu" : "Электрохимия (на англ. яз.) ",
                             "nameEn" : "Electrochemistry"
                         },
                         "Lesson" : [

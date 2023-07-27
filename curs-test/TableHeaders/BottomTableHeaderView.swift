@@ -20,23 +20,20 @@ class BottomTableHeaderView: UIView {
         return view
     }()
     
-//    let lectureView: UIView = {
-//        let view = UIView()
-//        view.backgroundColor = .red
-//        return view
-//    }()
-//
-//    let seminarView: UIView = {
-//        let view = UIView()
-//        view.backgroundColor = .blue
-//        return view
-//    }()
-//
-//    let laboratoryView: UIView = {
-//        let view = UIView()
-//        view.backgroundColor = .cyan
-//        return view
-//    }()
+    let lectureView: UIView = {
+        let view = UIView()
+        return view
+    }()
+
+    let seminarView: UIView = {
+        let view = UIView()
+        return view
+    }()
+
+    let labView: UIView = {
+        let view = UIView()
+        return view
+    }()
     
     let leftViewLabel = TableLabel(text: "Наименование дисциплины",
                                    font: UIFont.systemFont(ofSize: 14),
@@ -51,28 +48,19 @@ class BottomTableHeaderView: UIView {
                                   font: UIFont.systemFont(ofSize: 14),
                                   color: .systemGray)
     
-    let laboratoryLabel = TableLabel(text: "Лаборат.",
+    let labLabel = TableLabel(text: "Лаборат.",
                                   font: UIFont.systemFont(ofSize: 14),
                                   color: .systemGray)
-    
-    let lessonTypeSV: UIStackView = {
-        let sv = UIStackView()
-        sv.axis = .horizontal
-        sv.distribution = .fillEqually
-        return sv
-    }()
     
     private func addViews() {
         addSubviews(leftView, rightView)
         leftView.addSubview(leftViewLabel)
         
-        rightView.addSubview(lessonTypeSV)
-        lessonTypeSV.addArrangedSubviews(lectureLabel, seminarLabel, laboratoryLabel)
-//        lessonTypeSV.addArrangedSubviews(lectureView, seminarView, laboratoryView)
+        rightView.addSubviews(lectureView, seminarView, labView)
         
-//        lectureView.addSubview(lectureLabel)
-//        seminarView.addSubview(seminarLabel)
-//        laboratoryView.addSubview(laboratoryLabel)
+        lectureView.addSubview(lectureLabel)
+        seminarView.addSubview(seminarLabel)
+        labView.addSubview(labLabel)
     }
     
     override init(frame: CGRect) {
@@ -94,10 +82,15 @@ class BottomTableHeaderView: UIView {
         leftViewLabel.anchor(left: self.leftAnchor, right: leftView.rightAnchor, paddingLeft: 10)
         leftViewLabel.centerY(in: leftView)
         
-        lessonTypeSV.anchor(top: self.topAnchor, left: leftView.rightAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, paddingRight: 10)
+        lectureView.anchor(top: self.topAnchor, left: rightView.leftAnchor, bottom: self.bottomAnchor, width: WindowDimensions.width * 0.6 * 0.33)
         
-
-    
+        seminarView.anchor(top: self.topAnchor, left: lectureView.rightAnchor, bottom: self.bottomAnchor, width: WindowDimensions.width * 0.6 * 0.33)
+        
+        labView.anchor(top: self.topAnchor, left: seminarView.rightAnchor, bottom: self.bottomAnchor, width: WindowDimensions.width * 0.6 * 0.33)
+        
+        lectureLabel.center(in: lectureView, in: lectureView)
+        seminarLabel.center(in: seminarView, in: seminarView)
+        labLabel.center(in: labView, in: labView)
     }
     
 }

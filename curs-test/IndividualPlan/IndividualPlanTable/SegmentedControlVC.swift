@@ -21,6 +21,7 @@ class SegmentedControlVC: GenericVC<SegmentedControlView> {
     }
     
     func configureView(with data: IndividualPlanModel) {
+        viewData = nil
         viewData = data
         
         for i in 0..<2 {
@@ -29,6 +30,11 @@ class SegmentedControlVC: GenericVC<SegmentedControlView> {
         }
         
         rootView.selector.selectedSegmentIndex = 0
+        rootView.selector.addTarget(self, action: #selector(segmentedControlValueChanged(_:)), for: .valueChanged)
+    }
+    
+    @objc func segmentedControlValueChanged(_ sender: UISegmentedControl) {
+        rootView.tableView.reloadData()
     }
 }
 
