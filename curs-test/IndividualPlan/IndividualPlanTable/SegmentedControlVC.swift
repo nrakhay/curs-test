@@ -28,7 +28,6 @@ class SegmentedControlVC: GenericVC<SegmentedControlView> {
             let element = data.Semesters
             let localizedStr = NSLocalizedString("semesterWithNum", comment: "Individual Plan Strings")
             rootView.selector.insertSegment(withTitle: String(format: localizedStr, element[i].Number), at: i, animated: true)
-//            rootView.selector.insertSegment(withTitle: "Семестр \(element[i].Number)", at: i, animated: true)
         }
         
         rootView.selector.selectedSegmentIndex = 0

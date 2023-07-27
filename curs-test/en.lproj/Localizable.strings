@@ -7,11 +7,11 @@
 */
 
 /* Individual Plan Strings */
-"individualPlan" = "Individual Study Plan";
-"courseTitle" = "Course Title";
+"individualPlan" = "Individual study plan";
+"courseTitle" = "Course title";
 "classroomClasses" = "Classroom classes (in hours)";
 "lecture" = "Lecture";
 "seminar" = "Seminar";
 "lab" = "Lab.";
 "semesterWithNum" = "Semester %@";
-"academicYearText" = "for %@";
+"academicYearText" = "for %@ academic year";

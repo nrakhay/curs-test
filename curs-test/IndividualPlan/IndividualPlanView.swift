@@ -25,14 +25,14 @@ final class IndividualPlanView: UIView {
         let label = UILabel()
         label.textColor = .label
         label.text = NSLocalizedString("individualPlan", comment: "Individual Plan Strings")
-        label.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
+        label.font = UIFont.systemFont(ofSize: 18, weight: .heavy)
         return label
     }()
     
     let bottomHeaderLabel: UILabel = {
         let label = UILabel()
         label.textColor = .label
-        label.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
+        label.font = UIFont.systemFont(ofSize: 18, weight: .heavy)
         return label
     }()
     

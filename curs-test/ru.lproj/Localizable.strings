@@ -14,4 +14,4 @@
 "seminar" = "Семинар";
 "lab" = "Лаборат.";
 "semesterWithNum" = "Семестр %@";
-"academicYearText" = "на %@";
+"academicYearText" = "на %@ год";

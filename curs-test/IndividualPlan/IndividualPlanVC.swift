@@ -32,9 +32,17 @@ final class IndividualPlanVC: GenericVC<IndividualPlanView> {
     }
     
     private func setupViews(with data: IndividualPlanModel) {
+        var formattedAcademicYear = ""
+        for (idx, char) in data.AcademicYear.enumerated() {
+            if idx == 9 {
+                break
+            }
+            
+            formattedAcademicYear.append(String(char))
+        }
+        
         let text = NSLocalizedString("academicYearText", comment: "Individual Plan Strings")
-        rootView.bottomHeaderLabel.text = String(format: text, data.AcademicYear)
-//        rootView.bottomHeaderLabel.text = "на \(data.AcademicYear)"
+        rootView.bottomHeaderLabel.text = String(format: text, formattedAcademicYear)
     }
     
     private func parseData() {
