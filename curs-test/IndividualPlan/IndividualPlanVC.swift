@@ -62,12 +62,16 @@ final class IndividualPlanVC: GenericVC<IndividualPlanView> {
     }
     
     @objc private func saveFileTapped() {
-        
+        guard let url = URL(string: "https://yes-pdf.com/electronic-book/5109") else { return }
+        let urlSession = URLSession(configuration: .default, delegate: self, delegateQueue: OperationQueue())
+        let downloadTask = urlSession.downloadTask(with: url)
+        downloadTask.resume()
     }
+}
 
-
-
-
-
+extension IndividualPlanVC: URLSessionDownloadDelegate {
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+        print("file downloaded to: ", location)
+    }
 }
 

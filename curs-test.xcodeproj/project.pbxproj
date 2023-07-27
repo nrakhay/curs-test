@@ -18,7 +18,7 @@
 		5C2835462A71027100F74EC2 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2835452A71027100F74EC2 /* Constraints.swift */; };
 		5C28354A2A7104D400F74EC2 /* SFConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2835492A7104D400F74EC2 /* SFConstants.swift */; };
 		5C28354C2A71079700F74EC2 /* IndividualPlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C28354B2A71079700F74EC2 /* IndividualPlanModel.swift */; };
-		5C28354E2A7117E100F74EC2 /* PlanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C28354D2A7117E100F74EC2 /* PlanData.swift */; };
+		5C28354E2A7117E100F74EC2 /* IndividualPlanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C28354D2A7117E100F74EC2 /* IndividualPlanData.swift */; };
 		5C2835532A7123D000F74EC2 /* SegmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2835522A7123D000F74EC2 /* SegmentedControlView.swift */; };
 		5C2835552A71241C00F74EC2 /* SegmentedControlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2835542A71241C00F74EC2 /* SegmentedControlVC.swift */; };
 		5C2835582A712E9000F74EC2 /* TopTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2835572A712E9000F74EC2 /* TopTableHeaderView.swift */; };
@@ -43,7 +43,7 @@
 		5C2835452A71027100F74EC2 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
 		5C2835492A7104D400F74EC2 /* SFConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFConstants.swift; sourceTree = "<group>"; };
 		5C28354B2A71079700F74EC2 /* IndividualPlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualPlanModel.swift; sourceTree = "<group>"; };
-		5C28354D2A7117E100F74EC2 /* PlanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanData.swift; sourceTree = "<group>"; };
+		5C28354D2A7117E100F74EC2 /* IndividualPlanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualPlanData.swift; sourceTree = "<group>"; };
 		5C2835522A7123D000F74EC2 /* SegmentedControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlView.swift; sourceTree = "<group>"; };
 		5C2835542A71241C00F74EC2 /* SegmentedControlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlVC.swift; sourceTree = "<group>"; };
 		5C2835572A712E9000F74EC2 /* TopTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTableHeaderView.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 				5C28352A2A70FEF300F74EC2 /* IndividualPlanVC.swift */,
 				5C28353C2A71002100F74EC2 /* IndividualPlanView.swift */,
 				5C28354B2A71079700F74EC2 /* IndividualPlanModel.swift */,
-				5C28354D2A7117E100F74EC2 /* PlanData.swift */,
+				5C28354D2A7117E100F74EC2 /* IndividualPlanData.swift */,
 				5C28354F2A71233B00F74EC2 /* IndividualPlanTable */,
 			);
 			path = IndividualPlan;
@@ -254,7 +254,7 @@
 				5C28353B2A70FFA800F74EC2 /* GenericVC.swift in Sources */,
 				5C2835552A71241C00F74EC2 /* SegmentedControlVC.swift in Sources */,
 				5C28355F2A71406400F74EC2 /* TableLabel.swift in Sources */,
-				5C28354E2A7117E100F74EC2 /* PlanData.swift in Sources */,
+				5C28354E2A7117E100F74EC2 /* IndividualPlanData.swift in Sources */,
 				5C2835462A71027100F74EC2 /* Constraints.swift in Sources */,
 				5C28354A2A7104D400F74EC2 /* SFConstants.swift in Sources */,
 				5C2835532A7123D000F74EC2 /* SegmentedControlView.swift in Sources */,
