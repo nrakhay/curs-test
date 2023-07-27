@@ -9,28 +9,27 @@ import UIKit
 
 class DisciplineTVCell: UITableViewCell {
     static let identifier = "DisciplineTVCell"
-    static let preferredHeight: CGFloat = 60
+    static let preferredHeight: CGFloat = 80
     
-//    struct ViewModel {
-//        let disciplineName: String
-//        let plannedHoursLecture: Int?
-//        let realHoursLecture: Int?
-//        let plannedHoursSeminar: Int?
-//        let realHoursSeminar: Int?
-//        let plannedHoursLab: Int?
-//        let realHoursLab: Int?
-//
-//        init(disciplineName: String,
-//             plannedLecture: Int? = nil,
-//             realLecture: Int? = nil,
-//             plannedSeminar: Int? = nil,
-//             realSeminar: Int? = nil,
-//             plannedLab: Int? = nil,
-//             plann
-//        ) {
-//
-//        }
-//    }
+    struct Hours {
+        let plannedHours: String
+        let realHours: String
+    }
+    
+    struct ViewModel {
+        let disciplineName: String
+        let lectureHours: Hours?
+        let seminarHours: Hours?
+        let labHours: Hours?
+        
+        init(disciplineName: String, lectureHours: Hours? = nil, seminarHours: Hours? = nil, labHours: Hours? = nil) {
+            self.disciplineName = disciplineName
+            self.lectureHours = lectureHours
+            self.seminarHours = seminarHours
+            self.labHours = labHours
+        }
+    }
+    
     
     let leftView: UIView = {
         let view = UIView()
@@ -45,16 +44,17 @@ class DisciplineTVCell: UITableViewCell {
     }()
     
     let disciplineNameLabel = TableLabel(font: UIFont.systemFont(ofSize: 14, weight: .bold), color: .label, linesNumber: 0)
-//
-//    func configure(with viewModel: ViewModel) {
-//        disciplineNameLabel.text = viewModel.disciplineName
-//
-//    }
+
+    func configure(with viewModel: ViewModel) {
+        disciplineNameLabel.text = viewModel.disciplineName
+        
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         addSubviews(leftView, rightView)
+        leftView.addSubview(disciplineNameLabel)
     }
     
     required init?(coder: NSCoder) {
@@ -64,6 +64,7 @@ class DisciplineTVCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
+        disciplineNameLabel.text = nil
     }
     
     override func layoutSubviews() {
@@ -72,5 +73,8 @@ class DisciplineTVCell: UITableViewCell {
         leftView.anchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, width: WindowDimensions.width * 0.4)
         
         rightView.anchor(top: self.topAnchor, left: leftView.rightAnchor, bottom: self.bottomAnchor, width: WindowDimensions.width * 0.6)
+        
+        disciplineNameLabel.anchor(left: self.leftAnchor, right: leftView.rightAnchor, paddingLeft: 10)
+        disciplineNameLabel.centerY(in: self)
     }
 }

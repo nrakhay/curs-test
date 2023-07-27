@@ -34,7 +34,11 @@ class SegmentedControlVC: GenericVC<SegmentedControlView> {
 
 extension SegmentedControlVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if let data = viewData {
+            return data.Semesters[rootView.selector.selectedSegmentIndex].Disciplines.count
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -44,6 +48,32 @@ extension SegmentedControlVC: UITableViewDelegate, UITableViewDataSource {
         else {
             fatalError()
         }
+        
+        guard let viewData = viewData else { return cell }
+        
+        let currDiscipline = viewData.Semesters[rootView.selector.selectedSegmentIndex].Disciplines[indexPath.row
+        ]
+        
+        let disciplineName = currDiscipline.DisciplineName.nameRu
+        var lectureHours: DisciplineTVCell.Hours? = nil
+        var seminarHours: DisciplineTVCell.Hours? = nil
+        var labHours: DisciplineTVCell.Hours? = nil
+        
+        for lesson in currDiscipline.Lesson {
+            switch lesson.LessonTypeId {
+            case "1":
+                lectureHours = DisciplineTVCell.Hours(plannedHours: lesson.Hours, realHours: lesson.RealHours)
+            case "2":
+                seminarHours = DisciplineTVCell.Hours(plannedHours: lesson.Hours, realHours: lesson.RealHours)
+            case "3":
+                labHours = DisciplineTVCell.Hours(plannedHours: lesson.Hours, realHours: lesson.RealHours)
+            default:
+                break
+            }
+        }
+
+        cell.configure(with: .init(disciplineName: disciplineName, lectureHours: lectureHours, seminarHours: seminarHours, labHours: labHours))
+        
         return cell
     }
     

@@ -55,10 +55,7 @@ struct DisciplineName: Codable {
 }
 
 struct Lesson: Codable {
-    enum LessonTypeId: String, Codable {
-        case lecture = "1", seminar = "2", laboratory = "3"
-    }
-    
+    let LessonTypeId: String
     let Hours: String
     let RealHours: String
     

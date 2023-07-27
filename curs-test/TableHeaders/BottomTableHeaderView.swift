@@ -51,7 +51,7 @@ class BottomTableHeaderView: UIView {
                                   font: UIFont.systemFont(ofSize: 14),
                                   color: .systemGray)
     
-    let laboratoryLabel = TableLabel(text: "Лаборатория",
+    let laboratoryLabel = TableLabel(text: "Лаборат.",
                                   font: UIFont.systemFont(ofSize: 14),
                                   color: .systemGray)
     
@@ -95,6 +95,8 @@ class BottomTableHeaderView: UIView {
         leftViewLabel.centerY(in: leftView)
         
         lessonTypeSV.anchor(top: self.topAnchor, left: leftView.rightAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, paddingRight: 10)
+        
+
     
     }
     
