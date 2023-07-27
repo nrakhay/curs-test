@@ -24,7 +24,7 @@ final class IndividualPlanView: UIView {
     let topHeaderLabel: UILabel = {
         let label = UILabel()
         label.textColor = .label
-        label.text = "Индивидуальный учебный план"
+        label.text = NSLocalizedString("individualPlan", comment: "Individual Plan Strings")
         label.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
         return label
     }()

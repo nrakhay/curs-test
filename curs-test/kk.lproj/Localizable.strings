@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  curs-test
+
+  Created by Nurali Rakhay on 27.07.2023.
+  
+*/
+
+/* Individual Plan Strings */
+"individualPlan" = "Жеке оқу жоспары";
+"courseTitle" = "Пән атауы";
+"classroomClasses" = "Аудиториялық сабақтар (сағат)";
+"lecture" = "Дәріс";
+"seminar" = "Семинар";
+"lab" = "Зерт.";
+"semesterWithNum" = "Семестр %@";
+"academicYearText" = "%@";

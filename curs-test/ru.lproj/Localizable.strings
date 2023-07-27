@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  curs-test
+
+  Created by Nurali Rakhay on 27.07.2023.
+  
+*/
+
+/* Individual Plan Strings */
+"individualPlan" = "Индивидуальный учебный план";
+"courseTitle" = "Наименование дисциплины";
+"classroomClasses" = "Аудиторные занятия в часах";
+"lecture" = "Лекция";
+"seminar" = "Семинар";
+"lab" = "Лаборат.";
+"semesterWithNum" = "Семестр %@";
+"academicYearText" = "на %@";

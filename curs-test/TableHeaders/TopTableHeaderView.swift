@@ -12,7 +12,7 @@ class TopTableHeaderView: UIView {
     
     let rightView = UIView()
 
-    let rightViewLabel = TableLabel(text: "Аудиторные занятия в часах",
+    let rightViewLabel = TableLabel(text: NSLocalizedString("classroomClasses", comment: "Individual Plan Strings"),
                                     font: UIFont.systemFont(ofSize: 14),
                                     color: .systemGray)
     

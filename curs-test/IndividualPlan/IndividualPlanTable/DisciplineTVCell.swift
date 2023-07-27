@@ -121,7 +121,7 @@ class DisciplineTVCell: UITableViewCell {
         disciplineNameLabel.text = viewModel.disciplineName
         
         if let lecture = viewModel.lectureHours {
-            var str = "\(lecture.realHours) / \(lecture.plannedHours)"
+            let str = "\(lecture.realHours) / \(lecture.plannedHours)"
             
             if lecture.realHours == lecture.plannedHours {
                 lectureLabel.attributedText = generateCompletedHoursLabel(with: str)
@@ -133,7 +133,7 @@ class DisciplineTVCell: UITableViewCell {
         }
         
         if let seminar = viewModel.seminarHours {
-            var str = "\(seminar.realHours) / \(seminar.plannedHours)"
+            let str = "\(seminar.realHours) / \(seminar.plannedHours)"
             
             if seminar.realHours == seminar.plannedHours {
                 seminarLabel.attributedText = generateCompletedHoursLabel(with: str)
@@ -143,7 +143,7 @@ class DisciplineTVCell: UITableViewCell {
         }
         
         if let lab = viewModel.labHours {
-            var str = "\(lab.realHours) / \(lab.plannedHours)"
+            let str = "\(lab.realHours) / \(lab.plannedHours)"
             
             if lab.realHours == lab.plannedHours {
                 labLabel.attributedText = generateCompletedHoursLabel(with: str)

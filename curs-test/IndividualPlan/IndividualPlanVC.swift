@@ -13,7 +13,7 @@ final class IndividualPlanVC: GenericVC<IndividualPlanView> {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = "Индивидуальный учебный план"
+        self.title = NSLocalizedString("individualPlan", comment: "Individual Plan Strings")
         
         self.add(segmentedVC, view: rootView.bottomView)
         setupBarButtons()
@@ -32,7 +32,9 @@ final class IndividualPlanVC: GenericVC<IndividualPlanView> {
     }
     
     private func setupViews(with data: IndividualPlanModel) {
-        rootView.bottomHeaderLabel.text = "на \(data.AcademicYear)"
+        let text = NSLocalizedString("academicYearText", comment: "Individual Plan Strings")
+        rootView.bottomHeaderLabel.text = String(format: text, data.AcademicYear)
+//        rootView.bottomHeaderLabel.text = "на \(data.AcademicYear)"
     }
     
     private func parseData() {

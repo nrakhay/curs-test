@@ -35,20 +35,20 @@ class BottomTableHeaderView: UIView {
         return view
     }()
     
-    let leftViewLabel = TableLabel(text: "Наименование дисциплины",
+    let leftViewLabel = TableLabel(text: NSLocalizedString("courseTitle", comment: "Individual Plan Strings"),
                                    font: UIFont.systemFont(ofSize: 14),
                                    color: .systemGray,
                                    linesNumber: 0)
     
-    let lectureLabel = TableLabel(text: "Лекция",
+    let lectureLabel = TableLabel(text: NSLocalizedString("lecture", comment: "Individual Plan Strings"),
                                   font: UIFont.systemFont(ofSize: 14),
                                   color: .systemGray)
     
-    let seminarLabel = TableLabel(text: "Семинар",
+    let seminarLabel = TableLabel(text: NSLocalizedString("seminar", comment: "Individual Plan Strings"),
                                   font: UIFont.systemFont(ofSize: 14),
                                   color: .systemGray)
     
-    let labLabel = TableLabel(text: "Лаборат.",
+    let labLabel = TableLabel(text: NSLocalizedString("lab", comment: "Individual Plan Strings"),
                                   font: UIFont.systemFont(ofSize: 14),
                                   color: .systemGray)
     
