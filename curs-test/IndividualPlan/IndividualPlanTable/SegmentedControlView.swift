@@ -39,14 +39,15 @@ class SegmentedControlView: UIView {
         
         selector.anchor(top: self.topAnchor, width: self.width, height: 50)
         selector.centerX(in: self)
-        
+
         topTableHeaderView.anchor(top: selector.bottomAnchor, width: self.width, height: 40)
         topTableHeaderView.centerX(in: self)
-        
+
         bottomTableHeaderView.anchor(top: topTableHeaderView.bottomAnchor, width: self.width, height: 60)
         bottomTableHeaderView.centerX(in: self)
-        
-        tableView.anchor(top: bottomTableHeaderView.bottomAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, width: self.width)
+
+        tableView.anchor(top: bottomTableHeaderView.bottomAnchor, left: self.leftAnchor, right: self.rightAnchor, height: 500)
+//        tableView.anchor(top: bottomTableHeaderView.bottomAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, width: self.width)
     }
 
 }
