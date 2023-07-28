@@ -45,9 +45,8 @@ class SegmentedControlView: UIView {
 
         bottomTableHeaderView.anchor(top: topTableHeaderView.bottomAnchor, width: self.width, height: 60)
         bottomTableHeaderView.centerX(in: self)
-
+        
         tableView.anchor(top: bottomTableHeaderView.bottomAnchor, left: self.leftAnchor, right: self.rightAnchor, height: 500)
-//        tableView.anchor(top: bottomTableHeaderView.bottomAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, width: self.width)
     }
 
 }

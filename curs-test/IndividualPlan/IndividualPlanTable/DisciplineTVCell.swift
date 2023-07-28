@@ -183,7 +183,7 @@ class DisciplineTVCell: UITableViewCell {
         
         rightView.anchor(top: self.topAnchor, left: leftView.rightAnchor, bottom: self.bottomAnchor, width: WindowDimensions.width * 0.6)
         
-        disciplineNameLabel.anchor(left: self.leftAnchor, right: leftView.rightAnchor, paddingLeft: 10)
+        disciplineNameLabel.anchor(left: self.leftAnchor, right: leftView.rightAnchor, paddingLeft: 14)
         disciplineNameLabel.centerY(in: self)
         
         lectureView.anchor(top: self.topAnchor, left: rightView.leftAnchor, bottom: self.bottomAnchor, width: WindowDimensions.width * 0.6 * 0.33)

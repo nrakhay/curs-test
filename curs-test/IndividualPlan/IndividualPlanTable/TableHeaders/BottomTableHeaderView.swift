@@ -79,7 +79,7 @@ class BottomTableHeaderView: UIView {
         
         rightView.anchor(top: self.topAnchor, left: leftView.rightAnchor, bottom: self.bottomAnchor, width: WindowDimensions.width * 0.6)
         
-        leftViewLabel.anchor(left: self.leftAnchor, right: leftView.rightAnchor, paddingLeft: 10)
+        leftViewLabel.anchor(left: self.leftAnchor, right: leftView.rightAnchor, paddingLeft: 14)
         leftViewLabel.centerY(in: leftView)
         
         lectureView.anchor(top: self.topAnchor, left: rightView.leftAnchor, bottom: self.bottomAnchor, width: WindowDimensions.width * 0.6 * 0.33)
